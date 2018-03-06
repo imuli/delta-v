@@ -6,6 +6,8 @@ plans, designs, and considerations for travelling housing
 Specific systems are discussed in their own section:
 
 * [The Substrate](substrate/)
-* [Shunshine, Oil, Wood, and Wire](energy/)
+* [Sunshine, Oil, Wood, and Wire](energy/)
+* [Everything and the Kitchen Sink](kitchen/)
 * [Melons, Morning Glories, and Mushrooms](growth/)
-* [Interfacing with the state](legal/)
+* [Interfacing with the State](legal/)
+
