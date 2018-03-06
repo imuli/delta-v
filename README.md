@@ -1,4 +1,4 @@
-# delta-v
+# serenity
 plans, designs, and considerations for travelling housing
 
 ## Sections
