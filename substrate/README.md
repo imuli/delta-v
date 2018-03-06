@@ -50,7 +50,7 @@ Not much room for storage underneath the bus, worse than the conventional.
 
 ## Fuel
 
-More in [energy](../energy/README.md), but the long and short is that Diesel is cheaper to start with, more reliable, and provides the short term opportunity to use waste vegitible oil.
+More in [energy](../energy/), but the long and short is that Diesel is cheaper to start with, more reliable, and provides the short term opportunity to use waste vegitible oil.
 
 ## Dimensions
 
@@ -88,7 +88,7 @@ I am inclined to go with one-side-smooth plywood for the floor and walls at leas
 
 Bus windows are terribly leaky.
 On the other hand, taking them all out and replacing them with fixed windows is extra work.
-The [growing things](../growth/README.md) plans call for two layers of windows, separated by a planting space.
+The [growing things](../growth/) plans call for two layers of windows, separated by a planting space.
 
 ### Internal partitions
 
