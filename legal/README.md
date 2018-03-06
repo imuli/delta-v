@@ -16,7 +16,7 @@ as evidenced by the presence of at least four of the following facilities:
 * a potable water supply system including a faucet and a sink;
 * and a separate 110-125 volt electrical power supply and/or propane.
 
-### Relevant bits of the Maine State Code
+### Maine State Code
 
 Maine is a bit more specific in their requirements than the US government:
 
