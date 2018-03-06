@@ -25,11 +25,18 @@ Maine is a bit more specific in their requirements than the US government:
 "Motor home" means a motor vehicle designed to provide temporary living quarters for recrational, caping or travel use that contains at least 4 of the following as permanently installed independent systems that meet the National Fire Protection Association standard for recrational vehicles:
 
 1. A cooking facility with an on-board fuel source;
+   ([energy](../energy#cooking-heat))
+   ([kitchen](../kitchen#burners))
 2. A potable water supply system that includes at least a sink, a faucet and a water tank with an exterior service supply connection;
-3. A toilet with extorior evacuation;
+   ([kitchen](../kitchen#sink))
+3. A toilet with exterior evacuation;
+   ([toilet](../waste#toilet))
 4. A gas or electric refrigerator;
+   ([kitchen](../kitchen#refrigeration))
 5. A heating or air-conditioning system with an on-board power or fuel source seperate from the vehicle engine; and
+   (See [energy](../energy#space-heat).)
 6. A 110-volt to 125-volt eletric power supply.
+   (See [energy](../energy#120240-vac).)
 
 
 * [Recreation Vehicles](title10ch214-A.pdf) ([mainelegislature.org](https://www.mainelegislature.org/legis/statutes/10/title10ch214-Asec0.html))
