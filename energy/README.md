@@ -93,10 +93,8 @@ General methods are:
 | Cycle Efficiency | >95%       | 75%       |
 | Cycle Durability | ~1000	| <350      |
 | Charging Circuit | Simple     | Complex   |
-| Upfront Cost^[1] | 40 ¢/Wh    | 12 ¢/Wh   | Can acquire Li-Ion for much cheaper now.
-| Levelized Cost   | 12 ¢/kWh   | 18 ¢/kWh  | Cents per kWh stored over lifetime of battery.
-
-:[1] [https://saurorja.org/2011/08/30/lead-acid-is-the-cheapest-battery-conditions-apply/]()
+| Upfront Cost     | 40 ¢/Wh    | 12 ¢/Wh   | Can acquire Li-Ion for much cheaper now.
+| Levelized Cost   | 12 ¢/kWh   | 18 ¢/kWh  | [Cents per kWh stored over lifetime of battery.](https://saurorja.org/2011/08/30/lead-acid-is-the-cheapest-battery-conditions-apply/)
 
 Lithium Ion is the clear winner here.
 NaS (Sodium-Sulphur) probably would win out in a stationary large scale application though.
@@ -128,7 +126,7 @@ Limiting charge range on Li-Ions to 3.1-3.9 V/cell is probably desirable.
 * extended battery life (more total Wh in and out)
 * 15.6V is quite safe for 16V capacators that most 12V loads use.
 
-##### 120~240 VAC
+#### 120~240 VAC
 
 * Guests will probably not have their lives wired for 12V,
   so having 120VAC available for them would be handy.
@@ -137,6 +135,14 @@ Limiting charge range on Li-Ions to 3.1-3.9 V/cell is probably desirable.
 * One of the qualifications to be considered a [motor home](../legal/title10ch214-A.pdf)
   is "A 110-volt to 125volt electric power supply."
   So even if we don't use it very much, it's an easy way to get one of the four of the six we need.
+
+##### Flywheel storage
+
+High speed lightweight flywheel storage is a thing.
+* Naturally produces 3-phase perfect sine wave AC.
+* You'd need two spinning in opposite directions to keep the bus balanced.
+* Very high specific energy and extremely high specific power.
+* Not available as an commercial off the shelf product AFAIK.
 
 #### High Voltage DC
 
