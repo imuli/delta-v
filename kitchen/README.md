@@ -7,7 +7,7 @@ Rain water probably doesn't satisfy this (FIXME: fact-check).
 
 Sensible option seems to be to have a rainwater tank to the main faucet for washing things and a little spigot for drinking water.
 
-Drain to the [grey water](../waste/#grey-water) tank.
+Drain to the [grey water](../garbage/#grey-water) tank.
 
 ## Shower
 

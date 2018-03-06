@@ -30,7 +30,7 @@ Maine is a bit more specific in their requirements than the US government:
 2. A potable water supply system that includes at least a sink, a faucet and a water tank with an exterior service supply connection;
    ([kitchen](../kitchen#sink))
 3. A toilet with exterior evacuation;
-   ([toilet](../waste#toilet))
+   ([toilet](../garbage#toilet))
 4. A gas or electric refrigerator;
    ([kitchen](../kitchen#refrigeration))
 5. A heating or air-conditioning system with an on-board power or fuel source seperate from the vehicle engine; and
