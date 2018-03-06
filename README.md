@@ -10,4 +10,5 @@ Specific systems are discussed in their own section:
 * [Everything and the Kitchen Sink](kitchen/)
 * [Melons, Morning Glories, and Mushrooms](growth/)
 * [Interfacing with the State](legal/)
+* [Mark and Sweep vs Escape Analysis](garbage/)
 
