@@ -1,16 +1,25 @@
 
-## Primary System
+## House System
 
 ### Needs
 
 #### Space Heat
 
+It's cold in the winter!
+The space is insulated but, especially with all those windows, we'll want heat.
+Low grade is perfectly fine, but lots of quantity.
+
 #### Cooking Heat
+
+Nice flexible heat sources that can be turned on and off quickly and are clean to interact with.
+Low grade and low quantity.
+
+Also one of the six systems to be considered a [motor home](../legal/title10ch214-A.pdf) is "A cooking facility with an on-board fuel-source."
 
 #### Low Voltage DC
 
 Most needs are <16volt, a couple in the 20-24v, possibly some 48-60v loads.
-Fairly low power all in all, maybe 1kW.
+Fairly low power all in all, maybe 1kW max.
 
 #### AC
 
@@ -19,11 +28,13 @@ Depends on stuff, probably mostly guest use?
 #### High Voltage DC / 3-phase Square Wave
 
 For driving the bus if eventually converted to electric.
->100kW
+Large intermitant loads >100kW.
 
 ### Heat Sources
 
 In the not-summer it'll be cold outside!
+
+Also one of the six systems to be considered a [motor home](../legal/title10ch214-A.pdf) is "A heating or air-conditioning system with an on-board power or fuel source separate from the vehicle engine"
 
 #### Wood, Charcoal, and other solid fuels
 
@@ -40,7 +51,7 @@ The liquid and solid furnaces could be combined with a sliding floor at the top 
 
 #### Propane, Hydrogen, and other gaseous fuels
 
-For cooking?
+For cooking? For refrigeration? For heating?
 
 Combined propane / waste oil furances are a thing.
 
@@ -52,6 +63,9 @@ just hard to store compactly.
 #### Solar Panels
 
 On the roof, on the designated south side of the bus. Obviously.
+
+Panels often put out 18V and aren't great in series with partial shading.
+Integrating individual buck/boost converters maybe makes sense even for parallel.
 
 #### From Heat Sources
 
@@ -70,16 +84,67 @@ General methods are:
 
 (Potential for regenerative breaking instead of engine breaking?)
 
-### Electricity Storage
+### Electricity Storage and Conversion
 
-Lots of Li-ion batteries is the current best bet.
-Lighter, longer-lived, and lower maintainence than Lead Acid with only a slight surcharge on cost.
+|  Consideration   |   Li-Ion   | Lead-Acid | Notes
+| ---------------  | ---------- | --------- | -----
+| Specific Energy  | 175 Wh/kg  | 35 Wh/kg  |
+| Specific Power   | 300 W/kg   | 180 W/kg  | Especially important for intermitant loads.
+| Cycle Efficiency | >95%       | 75%       |
+| Cycle Durability | ~1000	| <350      |
+| Charging Circuit | Simple     | Complex   |
+| Upfront Cost^[1] | 40 ¢/Wh    | 12 ¢/Wh   | Can acquire Li-Ion for much cheaper now.
+| Levelized Cost   | 12 ¢/kWh   | 18 ¢/kWh  | Cents per kWh stored over lifetime of battery.
 
-For a full electric conversion we're looking at two battery packs, or a lot of energy conversion.
+:[1] [https://saurorja.org/2011/08/30/lead-acid-is-the-cheapest-battery-conditions-apply/]()
 
-#### High Voltage
+Lithium Ion is the clear winner here.
+NaS (Sodium-Sulphur) probably would win out in a stationary large scale application though.
 
-## Locomotion
+#### Low Voltage DC
+
+Pretty much two options that make sense:
+
+* 4 groups of Li-Ion cells in series. 12-16V.
+  * Can directly power a lot of loads:
+    * our laptops
+    * most mobile radios
+    * battery charger
+    * speakers
+    * the bus power system
+  * easy to charge from "12V" solar panels
+  * conversion to 24-48V is common
+  * bidirectional to 390V is rare
+  * can probably use to start the bus
+* 15 groups of Li-Ion cells in series. 45-60V.
+  * Can power PoE and telecom-style equipment directly (unlikely to have much of that).
+  * easy bidirectional conversion to 390 or 12V
+  * more efficient inverters to 120/240VAC
+
+Given that almost all our loads are 12-16V or under, 4 cells probably makes sense.
+
+Limiting charge range on Li-Ions to 3.1-3.9 V/cell is probably desirable.
+* dead simple charge-discharge cycle (max current / max voltage)
+* extended battery life (more total Wh in and out)
+* 15.6V is quite safe for 16V capacators that most 12V loads use.
+
+##### 120~240 VAC
+
+* Guests will probably not have their lives wired for 12V,
+  so having 120VAC available for them would be handy.
+* Inverters are available for all battery setups.
+  * A simple (silenced) UPS might do fine for 120.
+* One of the qualifications to be considered a [motor home](../legal/title10ch214-A.pdf)
+  is "A 110-volt to 125volt electric power supply."
+  So even if we don't use it very much, it's an easy way to get one of the four of the six we need.
+
+#### High Voltage DC
+
+* 100 groups of Li-Ion cells in series. 300-400V.
+  * Easy enough to downconvert to 12 or 48V if needed.
+  * Very efficient inverters (expensive?) to 120/240VAC
+
+## Locomotion System
 
 Initially we're looking at straight diesel fuel.
 At some point, order of a year or so,
