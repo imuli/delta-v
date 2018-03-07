@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="213.4mm" height="762.0mm" viewBox="0 0 2134 7620" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<style type="text/css">
+* {
+	fill: none;
+	stroke: none;
+	stroke-width: 10;
+}
+#loft {
+	opacity: 0.95;
+}
+#floor {
+	fill: brown;
+}
+#loft-floor {
+	stroke: black;
+	fill: tan;
+}
+.bed {
+	stroke: black;
+	fill: white;
+}
+.shelf {
+	stroke: black;
+	fill: green;
+	opacity: 0.8;
+}
+.wall {
+	fill: black;
+	opacity: 0.9;
+}
+.window {
+	fill: cyan;
+	opacity: 0.4;
+}
+</style>
+<rect id="floor" x="0" y="0" width="2134" height="7620"/>
+<g id="fort" transform="translate(0,5588)"> <!-- center is at 1067,1016 -->
+<rect class="bed" x="114.5" y="571.7" width="1905" height="990.6"/>
+<polygon class="shelf" points="0,0 0,2032 2134,2032 2134,0
+1317,0 1317,672 1919.5,672 1919.5,1462.3 214.5,1462.3 214.5,672 817,672 817,0"/>
+</g>
+<rect class="window" x="0" y="5788" width="2134" height="20"/>
+<g id="loft" transform="translate(0,5588)" onclick="toggle(this)">
+<rect id="loft-floor" x="0" y="0" width="2134" height="2032"/>
+<rect class="bed" x="114.5" y="25.4" width="1905" height="990.6"/>
+<rect class="bed" x="114.5" y="1016.0" width="1905" height="990.6"/>
+</g>
+<script type="text/javascript">
+var toggle = (what) => {
+	var opacity = window.getComputedStyle(what).opacity;
+	console.log(opacity);
+	what.style.opacity = 1 - opacity;
+}
+</script>
+</svg>
