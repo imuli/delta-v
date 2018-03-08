@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="243.8mm" height="883.9mm" viewBox="0 0 2438 8839" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="883.9mm" height="243.8mm" viewBox="0,0 8839,2438" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <style type="text/css">
 svg { background: black; }
 #loft {
@@ -62,6 +62,8 @@ svg { background: black; }
  </g>
 </defs>
 
+<g id="the-bus" transform="matrix(0 1 -1 0 8839 0)">
+
 <rect class="bus" x="0" y="0" width="2438" height="8839"/>
 <rect class="end" x="0" y="0" width="2438" height="200"/>
 <rect class="end" x="0" y="8639" width="2438" height="200"/>
@@ -99,6 +101,8 @@ svg { background: black; }
  </g>
  <rect class="shelf" x="0" y="0" width="300" height="4188"/>
  <rect class="shelf" x="1834" y="0" width="300" height="4188"/>
+</g>
+
 </g>
 
 <script type="text/javascript">

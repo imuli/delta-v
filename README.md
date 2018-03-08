@@ -1,6 +1,8 @@
 # serenity
 plans, designs, and considerations for travelling housing
 
+![a scematic sketch](living/sketch.svg)
+
 ## Sections
 
 Specific systems are discussed in their own section:
