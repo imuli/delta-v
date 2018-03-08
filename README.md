@@ -1,7 +1,7 @@
 # serenity
 plans, designs, and considerations for travelling housing
 
-![a scematic sketch](living/sketch.svg)
+[![a scematic sketch](living/sketch.svg)](https://imu.li/serenity/sketch.svg)
 
 ## Sections
 

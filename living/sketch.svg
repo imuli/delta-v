@@ -3,7 +3,7 @@
 <style type="text/css">
 svg { background: black; }
 #loft {
-	opacity: 0.95;
+	opacity: 0.85;
 }
 .floor {
 	fill: tan;
@@ -94,11 +94,13 @@ svg { background: black; }
   <polygon class="shelf" points="0,0 0,2032 2134,2032 2134,0 1317,0 1317,672 1919.5,672 1919.5,1462.3 214.5,1462.3 214.5,672 817,672 817,0" rx="50" ry="50"/>
  </g>
  <rect class="window" x="0" y="4388" width="2134" height="20"/>
+
  <g id="loft" transform="translate(0,4188)" onclick="toggle(this)">
   <rect class="floor" x="0" y="0" width="2134" height="2032"/>
   <use xlink:href="#single-bed" x="114.5" y="25.4"/>
   <use xlink:href="#single-bed" x="114.5" y="1016.0"/>
  </g>
+
  <rect class="shelf" x="0" y="0" width="300" height="4188"/>
  <rect class="shelf" x="1834" y="0" width="300" height="4188"/>
 </g>
