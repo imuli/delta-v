@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="213.4mm" height="762.0mm" viewBox="0 0 2134 7620" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="243.8mm" height="883.9mm" viewBox="0 0 2438 8839" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <style type="text/css">
-* {
-	fill: none;
-	stroke: none;
-	stroke-width: 10;
-}
+svg { background: black; }
 #loft {
 	opacity: 0.95;
 }
-#floor {
-	fill: brown;
-}
-#loft-floor {
-	stroke: black;
+.floor {
 	fill: tan;
+	stroke: black;
 }
 .bed {
 	stroke: black;
 	fill: white;
 }
+.end { fill: #000020; }
+.bus {
+	fill: #000040;
+	stroke: black;
+	stroke-width: 40;
+}
 .shelf {
 	stroke: black;
+	stroke-width: 10;
 	fill: green;
-	opacity: 0.8;
+	opacity: 0.6;
 }
 .wall {
 	fill: black;
+	opacity: 0.9;
+}
+.door {
+	fill: #400;
 	opacity: 0.9;
 }
 .window {
@@ -34,18 +38,69 @@
 	opacity: 0.4;
 }
 </style>
-<rect id="floor" x="0" y="0" width="2134" height="7620"/>
-<g id="fort" transform="translate(0,5588)"> <!-- center is at 1067,1016 -->
-<rect class="bed" x="114.5" y="571.7" width="1905" height="990.6"/>
-<polygon class="shelf" points="0,0 0,2032 2134,2032 2134,0
-1317,0 1317,672 1919.5,672 1919.5,1462.3 214.5,1462.3 214.5,672 817,672 817,0"/>
+
+<defs>
+ <rect id="single-bed" class="bed" width="1905" height="990.6" rx="100" ry="100"/>
+ <g id="steering-wheel">
+   <circle cx="0" cy="0" r="80" fill="black"/>
+   <circle cx="0" cy="0" r="240" fill="none" stroke="black" stroke-width="40"/>
+   <path d="M0,0 L0,-240 M0,0 L208,120 M0,0 L-208,120" stroke="black" stroke-width="40"/>
+ </g>
+ <g id="step">
+   <rect width="220" height="620" fill="grey" stroke="black" stroke-width="40"/>
+ </g>
+ <g id="wheel">
+   <rect width="440" height="800" fill="#604000" stroke="black" stroke-width="40"/>
+ </g>
+ <g id="driver-seat">
+   <rect width="520" height="320" fill="#111" rx="50" ry="50" stroke="none"/>
+   <rect y="320" width="520" height="80" fill="#111" rx="50" ry="50" stroke="black" stroke-width="10"/>
+ </g>
+ <g id="bus-seat">
+   <rect width="990" height="450" fill="#111" rx="50" ry="50" stroke="none"/>
+   <rect y="350" width="990" height="120" fill="#111" rx="50" ry="50" stroke="black" stroke-width="10"/>
+ </g>
+</defs>
+
+<rect class="bus" x="0" y="0" width="2438" height="8839"/>
+<rect class="end" x="0" y="0" width="2438" height="200"/>
+<rect class="end" x="0" y="8639" width="2438" height="200"/>
+
+<use xlink:href="#driver-seat" x="220" y="910"/>
+<use xlink:href="#steering-wheel" x="480" y="720"/>
+<use xlink:href="#step" x="1750" y="210"/>
+<use xlink:href="#step" x="1970" y="210"/>
+<use xlink:href="#step" x="2190" y="210"/>
+
+<rect class="floor" x="152" y="2419" width="2134" height="6220"/>
+
+<use xlink:href="#wheel" x="1980" y="1600"/>
+<use xlink:href="#wheel" x="20" y="1600"/>
+<use xlink:href="#wheel" x="1980" y="6189"/>
+<use xlink:href="#wheel" x="20" y="6189"/>
+
+<use xlink:href="#bus-seat" x="1423" y="1575"/>
+
+<rect class="wall" x="25" y="2291" width="700" height="128"/>
+<rect class="wall" x="1423" y="2291" width="990" height="128"/>
+<rect class="door" x="725" y="2355" width="698" height="64"/>
+
+<g id="interior" transform="translate(152,2419)">
+
+ <g id="fort" transform="translate(0,4188)"> <!-- center is at 1067,1016 -->
+  <use xlink:href="#single-bed" x="114.5" y="571.7"/>
+  <polygon class="shelf" points="0,0 0,2032 2134,2032 2134,0 1317,0 1317,672 1919.5,672 1919.5,1462.3 214.5,1462.3 214.5,672 817,672 817,0" rx="50" ry="50"/>
+ </g>
+ <rect class="window" x="0" y="4388" width="2134" height="20"/>
+ <g id="loft" transform="translate(0,4188)" onclick="toggle(this)">
+  <rect class="floor" x="0" y="0" width="2134" height="2032"/>
+  <use xlink:href="#single-bed" x="114.5" y="25.4"/>
+  <use xlink:href="#single-bed" x="114.5" y="1016.0"/>
+ </g>
+ <rect class="shelf" x="0" y="0" width="300" height="4188"/>
+ <rect class="shelf" x="1834" y="0" width="300" height="4188"/>
 </g>
-<rect class="window" x="0" y="5788" width="2134" height="20"/>
-<g id="loft" transform="translate(0,5588)" onclick="toggle(this)">
-<rect id="loft-floor" x="0" y="0" width="2134" height="2032"/>
-<rect class="bed" x="114.5" y="25.4" width="1905" height="990.6"/>
-<rect class="bed" x="114.5" y="1016.0" width="1905" height="990.6"/>
-</g>
+
 <script type="text/javascript">
 var toggle = (what) => {
 	var opacity = window.getComputedStyle(what).opacity;
