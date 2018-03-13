@@ -31,6 +31,11 @@ Given that I'm almost an employee I might as well inquire.
 
 ## Online
 
+### Ebay
+
+A variety of busses in a decent price range.
+Scattered all everywhere though.
+
 ### Craigslist
 
 There are sometimes options.
